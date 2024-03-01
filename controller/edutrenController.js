@@ -235,7 +235,16 @@ const showAllTutorial = async (req, res) => {
   }
 };
 
+const getAll = async (req, res) => {
+  try {
+    res.send("haloo");
+  } catch (error) {
+    res.json(error);
+  }
+};
+
 module.exports = {
+  getAll: getAll,
   // role
   postData: tambahRole,
   showAllData: showAllRole,

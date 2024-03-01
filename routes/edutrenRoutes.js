@@ -7,6 +7,8 @@ const multer = require("multer");
 const upload = multer(uploadConfig);
 
 // routing role
+router.get("/run", edutrenController.getAll);
+
 router.post("/role", upload.single("image"), edutrenController.postData);
 router.get("/roles", edutrenController.showAllData);
 router.get("/role/:id", edutrenController.showRoleById);
